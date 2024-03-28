@@ -7,7 +7,7 @@ public class Tile {
     public final char letter;
     public final int score;
     //CTORS
-    public Tile(char l, int s){
+    private Tile(char l, int s){
         this.letter=l;
         this.score=s;
     }
@@ -31,5 +31,20 @@ public class Tile {
     @Override
     public int hashCode() {
         return Objects.hash(letter, score);
+    }
+
+    public static class Bag {
+        private int[] letterCount;
+        private Tile[] tiles;
+
+        public Tile getRand(){
+            return tiles[(int)Math.random()*25];
+        }
+
+
+
+//        public Tile build(){
+//            return new Tile(this.letter, this.score);
+//        }
     }
 }

@@ -1,6 +1,6 @@
 import test.Board;
 import test.Tile;
-import test.Bag;
+import test.Tile.Bag;
 import test.Word;
 
 public class MainTrain {
