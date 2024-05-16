@@ -62,38 +62,6 @@ public class Board {
         return true;
     }
 
-//        public ArrayList<Word> getWords(Word w){
-//        ArrayList<Word> words = new ArrayList<Word>();
-//        words.add(w);
-//            int col = w.getColumn();
-//            int row = w.getRow();
-//            int length = w.getTiles().length;
-//            Word wordFound;
-//
-//        if (w.isVertical()){ // from top to bottom
-//            for (int i = row; i <length+row ; i++) {
-//                if (col >0)
-//                    if (gameboard[i][col-1]!=null) { // there is neighbor
-//                        wordFound = getWordFromIndex(i, col - 1, w.isVertical(),i-row);
-//                        if(!words.contains(wordFound))
-//                            words.add(wordFound);
-//                    }
-//                    if(col<14)
-//                        if (gameboard[i][col+1]!=null) {
-//                            wordFound = getWordFromIndex(i, col + 1, w.isVertical(),i-row);
-//                            if(!words.contains(wordFound))
-//                                words.add(wordFound);
-//                        }
-//            }
-//
-//
-//        }else{               // from left to right
-//
-//        }
-//
-//
-//        return words;
-//    }
     public int getScore(Word w){
         int sum = 0;
 
