@@ -30,7 +30,7 @@ public class MyServer {
                 try(Socket aClient = server.accept()){
                 ch.handleClient(aClient.getInputStream(), aClient.getOutputStream());
                 }catch (SocketTimeoutException e){
-                    System.out.println("Timed out");
+                    // this is time out
                 }catch(IOException e) {
                     e.printStackTrace();
                 }finally {

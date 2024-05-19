@@ -4,10 +4,16 @@ package test;
 import java.util.HashMap;
 
 public class DictionaryManager {
+    private static DictionaryManager dManager =null;
     private HashMap<String,Dictionary> books;
 
     public DictionaryManager(){
         this.books = new HashMap<>();
+    }
+    public static DictionaryManager get(){
+        if (dManager==null)
+            dManager= new DictionaryManager();
+        return dManager;
     }
     public boolean query(String ...args){
         boolean wordExist = false;
@@ -26,7 +32,7 @@ public class DictionaryManager {
 
         return wordExist;
     }
-    public boolean challage(String ...args){
+    public boolean challenge(String ...args){
 
         boolean wordExist = false;
         String word = args[args.length - 1];
@@ -43,5 +49,8 @@ public class DictionaryManager {
                 wordExist = true;
 
         return wordExist;
+    }
+    public int getSize(){
+        return books.size();
     }
 }
