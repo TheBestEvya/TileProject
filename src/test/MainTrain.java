@@ -97,9 +97,9 @@ public class MainTrain {
 		String t1[]=writeFile("t1.txt");
 		String t2[]=writeFile("t2.txt");
 		String t3[]=writeFile("t3.txt");
-		
+
 		DictionaryManager dm=DictionaryManager.get();
-		
+
 		if(!dm.query("t1.txt","t2.txt",t2[4]))
 			System.out.println("problem for Dictionary Manager query (-5)");
 		if(!dm.query("t1.txt","t2.txt",t1[9]))
@@ -112,10 +112,10 @@ public class MainTrain {
 			System.out.println("problem for Dictionary Manager challenge (-5)");
 		if(dm.challenge("t2.txt","t3.txt","t1.txt","3"+t2[5]))
 			System.out.println("problem for Dictionary Manager challenge (-5)");
-		
+
 		if(dm.getSize()!=3)
 			System.out.println("wrong size for the Dictionary Manager (-10)");
-		
+
 	}
 	
 	public static void runClient(int port,String query,boolean result) {
@@ -156,7 +156,7 @@ public class MainTrain {
 	public static void main(String[] args) {
 		if(testServer()) {
 			testDM();
-			testBSCH();			
+			testBSCH();
 		}
 		System.out.println("done");
 	}
